@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/spring">
+<head>
+
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" />
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="jumbotron">
+<h1 class="text-center">Test Certifications</h1>
+</div>
+
+	<div id="certs" class="container" th:fragment="certs">
+		<h1>Certifications</h1>
+		<div class="row well">
+			<div class="col-sm-4">
+				<img th:src="@{/images/itil.png}"
+					src="http://core0.staticworld.net/images/idge/imported/article/cio/2013/02/21/itil-100341137-orig.jpg"
+					alt="ITIL" class="img-thumbnail" width="100%" />
+
+
+			</div>
+
+			<div class="col-sm-4">
+				<img th:src="@{/images/oca_java.png}"
+					src="http://www.omni-academy.com/wp-content/uploads/2016/03/download-2.png"
+					alt="SQL" class="img-thumbnail" width="100%" />
+			</div>
+
+			<div class="col-sm-4">
+				<img th:src="@{/images/oce_sql.png}"
+					src="http://www.cecs.ucf.edu/certification/logos/oca7.jpg"
+					alt="JAVA" class="img-thumbnail" width="100%" />
+			</div>
+
+
+		</div>
+		<div class="row">
+			<div class="col-sm-12"><button class="btn btn-info pull-right">View More</button></div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" 
+	  xmlns:th="http://www.thymeleaf.org/spring"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layouts/main">
+<head>
+<title>Error Page</title>
+
+<style>
+* {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.mid-top {
+	margin-top: 15%;
+}
+
+body {
+	background-color: #eee;
+	
+}
+
+.well {
+	background: initial;
+	background-color: white; /* #0F5062 */
+	color: #0F5062;	
+	border-radius: 4px; 
+	background-color: #fff;
+	text-align: center;
+}
+</style>
+
+<script th:inline="javascript" >
+/*<![CDATA[*/
+	
+	//TIMER
+	var timer = new Date(Date.parse(new Date()) + 5 * 1000);
+	var interval = window.setInterval(getCountDown, 1000, timer);
+	
+	function getCountDown(remainingTime) {
+		var time = Date.parse(remainingTime) - Date.parse(new Date());
+		var seconds =  Math.floor((time / 1000) % 60);
+		$("#timeRemaining").text(seconds);
+	  	if(seconds <= 0) {
+			clearInterval(interval);
+			window.location = "/";
+	  	}
+	}
+	
+
+	//AUTOTYPE
+	function typeMessage(message) {
+		$("#errorMessage").text(message);
+	}
+
+
+	var i = 0;
+
+	var message = "Whoops! There was an error in the request.";
+	var messageLenght = message.length;
+
+
+	function autoTypeSubmit() {
+
+		if (i <= messageLenght) {
+			typeMessage(message.substring(0, i));
+			setTimeout(autoTypeSubmit, 25);
+			i++;
+		}
+	}
+
+	$(document).ready(autoTypeSubmit);
+
+/*]]>*/
+</script>
+
+</head>
+<body>
+
+	<div class="mid-top" layout:fragment="content" >
+
+		<div class="container">
+			<h2 class="text-right">Redirecting in: <span id="timeRemaining">5</span></h2>
+		</div>
+		<div class="container well">
+			<h2>
+				<span th:text="${status}"></span>
+				<span th:if="${status}" th:text="' - '"></span>
+				<span th:text="${message}"></span>
+			</h2>
+			<h2><span class="fa fa-meh-o" aria-hidden="true"></span>&nbsp;<span id="errorMessage"></span></h2>
+		</div>
+
+	</div>
+
+</body>
+</html>

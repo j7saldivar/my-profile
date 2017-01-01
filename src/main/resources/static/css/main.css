@@ -1,0 +1,37 @@
+.parallax-container {
+	padding: 100px 0px 100px 0px;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+}
+
+#about {
+	background:
+		url(https://upload.wikimedia.org/wikipedia/commons/a/a5/Austin_Evening.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#experience {
+	background-color: #eee;
+	width: 100%;
+	height: auto;
+}
+
+.carousel-control {
+	bottom: inherit;
+}
+	
+
+.carousel-indicators li {
+	background-color: #333;
+	border: 1px solid #333;
+}
+
+* {
+ 	font-family: "Century Gothic", CenturyGothic, Century Gothic, sans-serif;
+}

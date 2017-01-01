@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/spring"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/main">
+<head>
+
+<!-- Custom CSS -->
+<link th:href="@{/css/hideme.css}" rel="stylesheet" />
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<script th:src="@{/js/hideme.js}"></script>
+
+</head>
+<body>
+
+
+	<div layout:fragment="content">
+
+
+
+
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#myPage"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+
+						<li th:with="about=#{nav.about}"><a href="#home"
+							th:text="${#strings.toUpperCase(about)}">ABOUT</a></li>
+						<li th:with="certs=#{nav.certs}"><a href="#certs"
+							th:text="${#strings.toUpperCase(certs)}">CERTS</a></li>
+						<li th:with="skills=#{nav.skills}"><a href="#skills"
+							th:text="${#strings.toUpperCase(skills)}">SKILLS</a></li>
+						<li th:with="contact=#{nav.contact}"><a href="#contact"
+							th:text="${#strings.toUpperCase(contact)}">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="home" class="jumbotron">
+			<div class="container">
+				<br />
+				<div class="text-right">
+					<a href="?lang=en" th:text="#{language.english}">English</a> / <a
+						href="?lang=es" th:text="#{language.spanish}">Spanish</a>
+				</div>
+				<div class="text-center">
+
+					<h1>Jorge Saldivar</h1> 
+					<h5 th:utext="#{index.message}">- Software Engineer - </h5>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Container (About Section) -->
+		<div id="about" class="parallax-container hidden-xs">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9 well">
+						<h2 class="text-left">About me</h2>
+
+						<strong th:text="#{index.page.educationtitle}">Education:</strong>
+						<p th:text="#{index.page.education}">
+							B.S. in Information and Computer Science at Monterrey Institute
+							of Technology and Higher Education
+							<!-- Instituto Tecnologico de Estudios Superiores de Monterrey-->
+						</p>
+						<strong th:text="#{index.page.experiencetitle}">Experience:</strong>
+						<p th:text="#{index.page.experience}">+3 years of experience
+							in software industry. Mostly experienced in programming languages
+							such as Java EE, Spring, JPA, JavaScript, and Oracle SQL for
+							RDBMS. Projects I have worked on:</p>
+						<ul>
+							<li><p th:text="#{index.page.project1}">Software
+									Development and Defect Fixing</p></li>
+							<li><p th:text="#{index.page.project2}">Data Mining and
+									Data Analysis</p></li>
+							<li><p th:text="#{index.page.project3}">Unix Scripting</p></li>
+
+						</ul>
+
+
+
+
+
+
+					</div>
+					<div class="col-sm-3">
+
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Accenture-logo.png"
+							alt="ITIL" class="img-thumbnail well" width="100%" />
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- Container (Portfolio Section) -->
+		<div id="experience" class="container-fluid text-center bg-grey">
+
+			<h3 th:text="#{index.page.wordstodescribe}">Words that Describe
+				Myself</h3>
+			<br />
+			<div id="myCarousel" class="carousel slide text-center"
+				data-ride="carousel">
+				<div class="container">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<h5 th:text="#{index.page.description1}">"Study! Study!
+								Study! - Kintaro Oe"</h5>
+						</div>
+						<div class="item">
+							<h5 th:text="#{index.page.description2}">"Thinking outside
+								the box"</h5>
+						</div>
+
+
+
+					</div>
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button"
+						data-slide="prev"> <span
+						class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a> <a class="right carousel-control" href="#myCarousel" role="button"
+						data-slide="next"> <span
+						class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Container (About Section) -->
+
+		<div
+			style="background-image: url(https://subtlepatterns.com/patterns/crossword.png); background-repeat: repeat;">
+			<br /> <br />
+			<div id="certs" class="container">
+				<h2 class="text-center" th:text="#{index.page.certifications}">Certifications</h2>
+<br />
+
+
+
+				<div class="col-sm-4 hideme">
+					<div class="panel panel-default">
+						<div class="panel-heading">ITIL Foundation - 2013</div>
+						<div class="panel-body">
+
+							<img th:src="@{/images/itil.png}"
+								src="http://core0.staticworld.net/images/idge/imported/article/cio/2013/02/21/itil-100341137-orig.jpg"
+								alt="ITIL" class="img-thumbnail" width="100%" />
+
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+				<div class="col-sm-4 hideme">
+					<div class="panel panel-default">
+						<div class="panel-heading">OCA Java SE 7 - 2014</div>
+						<div class="panel-body">
+
+							<img th:src="@{/images/oca_java.png}"
+								src="http://www.omni-academy.com/wp-content/uploads/2016/03/download-2.png"
+								alt="SQL" class="img-thumbnail" width="100%" />
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-sm-4 hideme">
+					<div class="panel panel-default">
+						<div class="panel-heading">OCE SQL Expert - 2016</div>
+						<div class="panel-body">
+
+							<img th:src="@{/images/oce_sql.png}"
+								src="http://www.cecs.ucf.edu/certification/logos/oca7.jpg"
+								alt="JAVA" class="img-thumbnail" width="100%" />
+
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="col-sm-8">
+
+
+
+
+
+
+
+
+
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-heading">
+							<strong>Certifications of completion - udemy</strong>
+						</div>
+
+						<!-- Table -->
+						<table class="table">
+
+
+							<tr>
+								<td> Hibernate</td><td> <small><code>(UC-N0PN2X8D)</code></small></td>
+								<td>Spring Tutorials</td><td> <small><code>(UC-6SG1IGRS)</code></small></td>
+							</tr>
+							<tr>
+								<td>Design Patterns</td><td> <small><code>(UC-RTJU5RTF)</code></small></td>
+								<td>Multithreading</td><td> <small><code>(UC-L2PZ226X)</code></small></td>
+							</tr>
+							<tr>
+								<td>Spring Boot</td><td> <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-45P6YNU5.jpg"><small><code>(UC-45P6YNU5)</code></small></a></td>
+								<td>Selenium</td><td> <small><code>(UC-HN3MWDA1)</code></small></td>
+							</tr>
+							<tr>
+								<td>Spring Framework</td><td> <small><code>(UC-IOJ7P00B)</code></small></td>
+								<td>Thymeleaf</td><td> <small><code>(UC-DM43Z6U4)</code></small></td>
+							</tr>
+
+
+
+
+						</table>
+
+
+					</div>
+
+					<!-- <button class="btn btn-primary btn-xs pull-right">
+					<p th:text="#{index.page.viewmore}">View More</p>
+				</button> -->
+
+
+				</div>
+
+
+
+
+
+
+
+
+
+			</div>
+
+
+
+
+			<br />
+
+			<hr />
+
+			<!-- Container (Services Section) -->
+			<div id="skills" class="container">
+
+				<h2 class="text-center" th:text="#{index.page.skills}">SKILLS</h2>
+
+				<br />
+				<div class="row slideanim  text-center">
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-coffee fa-lg"></span>
+							<h4>JAVA</h4>
+							<p>Back-end</p>
+						</div>
+					</div>
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="glyphicon glyphicon-heart logo-small"></span>
+							<h4>JAVASCRIPT</h4>
+							<p>Front-end</p>
+						</div>
+					</div>
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-database fa-lg"></span>
+							<h4>SQL</h4>
+							<p>Data mining/analysis</p>
+						</div>
+					</div>
+				</div>
+				<br /> <br />
+				<div class="row slideanim  text-center">
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-linux fa-lg"></span>
+							<h4>UNIX</h4>
+							<p>Data mining/automation</p>
+						</div>
+					</div>
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-html5 fa-lg"></span>
+							<h4>HTML</h4>
+							<p>Web applications</p>
+						</div>
+					</div>
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-wrench fa-lg"></span>
+							<h4>JQUERY</h4>
+							<p>User Interface</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div th:replace="fragments/footer :: footer"></div>
+			<br />
+		</div>
+	</div>
+</body>
+</html>
