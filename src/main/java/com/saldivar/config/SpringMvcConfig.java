@@ -11,10 +11,10 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 @Configuration
-public class SpringMvcConfiguration extends WebMvcConfigurerAdapter {
+public class SpringMvcConfig extends WebMvcConfigurerAdapter {
 	
 	@Bean
-	public LocaleResolver localeResolver() {
+	LocaleResolver localeResolver() {
 		SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
 		sessionLocaleResolver.setDefaultLocale(Locale.US);
 		return sessionLocaleResolver;
