@@ -1,13 +1,14 @@
-package com.saldivar.controllers;
-
-import java.util.Date;
+package com.saldivar.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import com.saldivar.dao.ProductRepository;
+import com.saldivar.dao.UserRepository;
+import com.saldivar.utility.ProjectUtilities;
 
 @Component
 public class CronController {
@@ -16,14 +17,16 @@ public class CronController {
 
 	@Autowired
 	private ProductRepository pr;
+	
+	@Autowired
+	private UserRepository ur;
 
-	//@Scheduled(fixedRate = 1000)
-	//@Scheduled(cron="*/30 * * * * *")
-	public void getHome() {
-		pr.deleteAll();
-		Date date = new Date();
+	@Scheduled(cron="0 0 0 * * *")
+	public void cleanup() {
 		
-		logger.info(date.toString());
+		pr.deleteAll();
+		ur.deleteAll();
+		logger.info("Database cleaned at " + ProjectUtilities.dateTimeNow());
 	}
 
 }

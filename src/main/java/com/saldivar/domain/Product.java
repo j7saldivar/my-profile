@@ -1,4 +1,4 @@
-package com.saldivar.domains;
+package com.saldivar.domain;
 
 import java.util.HashSet;
 import java.util.Set;

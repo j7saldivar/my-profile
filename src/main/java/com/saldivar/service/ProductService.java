@@ -1,6 +1,6 @@
-package com.saldivar.services;
+package com.saldivar.service;
 
-import com.saldivar.domains.Product;
+import com.saldivar.domain.Product;
 
 public interface ProductService {
 

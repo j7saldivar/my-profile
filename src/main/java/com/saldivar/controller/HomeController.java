@@ -1,4 +1,4 @@
-package com.saldivar.controllers;
+package com.saldivar.controller;
 
 import java.security.Principal;
 import java.util.Optional;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.saldivar.dao.UserRepository;
-import com.saldivar.domains.Product;
-import com.saldivar.domains.User;
+import com.saldivar.domain.Product;
+import com.saldivar.domain.User;
 
 @Controller
 public class HomeController {
