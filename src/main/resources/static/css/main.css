@@ -33,5 +33,7 @@
 }
 
 * {
- 	font-family: "Century Gothic", CenturyGothic, Century Gothic, sans-serif;
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+	font-family: 'Open Sans', sans-serif;
+ 	/*font-family: "Century Gothic", CenturyGothic, Century Gothic, sans-serif;*/
 }
