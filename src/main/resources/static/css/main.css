@@ -32,8 +32,23 @@
 	border: 1px solid #333;
 }
 
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-style: normal;
+  src: url('http://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot');
+  src: url('http://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot?#iefix') format('embedded-opentype'),
+       local('Raleway'),
+       local('Raleway-regular'),
+       url('http://fonts.gstatic.com/s/raleway/v11/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2') format('woff2'),
+       url('http://fonts.gstatic.com/s/raleway/v11/cIFypx4yrWPDz3zOxk7hIQLUuEpTyoUstqEm5AMlJo4.woff') format('woff'),
+       url('http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf') format('truetype'),
+       url('http://fonts.gstatic.com/l/font?kit=IP_NSg73bUZGuyb3zF6qcQ&skey=30a27f2564731c64&v=v11#Raleway') format('svg');
+}
+
+
+
 * {
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway';
  	/*font-family: "Century Gothic", CenturyGothic, Century Gothic, sans-serif;*/
 }

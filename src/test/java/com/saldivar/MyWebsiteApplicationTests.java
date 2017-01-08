@@ -9,9 +9,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MyProfileApplicationTests {
+public class MyWebsiteApplicationTests {
 
-	private static final Logger log = LoggerFactory.getLogger(MyProfileApplicationTests.class);
+	private static final Logger log = LoggerFactory.getLogger(MyWebsiteApplicationTests.class);
 
 	@Test
 	public void contextOne() {

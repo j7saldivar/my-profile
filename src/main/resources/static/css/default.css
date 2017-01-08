@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Muli';
+  font-weight: 400;
+  font-style: normal;
+  src: url('http://fonts.gstatic.com/s/muli/v10/BkuZCUxEYxRfSu-XBj9_CA.eot');
+  src: url('http://fonts.gstatic.com/s/muli/v10/BkuZCUxEYxRfSu-XBj9_CA.eot?#iefix') format('embedded-opentype'),
+       local('Muli Regular'),
+       local('Muli-regular'),
+       url('http://fonts.gstatic.com/s/muli/v10/zscZFkjVRGyfQ_Pw-5exXPesZW2xOQ-xsNqO47m55DA.woff2') format('woff2'),
+       url('http://fonts.gstatic.com/s/muli/v10/minRpKQdEvXRRS8oAbAtWvesZW2xOQ-xsNqO47m55DA.woff') format('woff'),
+       url('http://fonts.gstatic.com/s/muli/v10/BfQP1MR3mJNaumtWa4Tizg.ttf') format('truetype'),
+       url('http://fonts.gstatic.com/l/font?kit=5laWPvb-IgmGJk9r92y1Hw&skey=2b55aa3f2f059b75&v=v10#Muli') format('svg');
+}
+
+* {
+	font-family: 'Muli';
+ 	/*font-family: "Century Gothic", CenturyGothic, Century Gothic, sans-serif;*/
+}

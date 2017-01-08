@@ -1,22 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/spring"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/main">
+<head></head>
+<body>
+
 <div class="container" th:fragment="footer">
+	
 	<hr />
 	<div class="row">
-
-		<div class="col-sm-12 text-center clearfix">
-
-			<a href="https://www.facebook.com/jorge.saldivar1" rel="external" target="_blank">
-				<span class="fa fa-facebook-square fa-3x" style="color: #333;"></span>
-			</a> 
-				
-				
-				
-				<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				
+		
+		<div class="col-sm-3 text-left">
+			<span th:text="#{footer.message}">JorgeSaldivar.com is hosted on AWS</span>
+		</div>
+	
+		<div class="col-sm-9 text-right">
+	
 			<a href="http://github.com/j7saldivar" rel="external">
-				<span class="fa fa-github fa-3x" style="color: #333;"></span>
+				<i class="fa fa-github fa-3x" style="color: #0F5062;" aria-hidden="true"></i>
+			</a>
+			
+			<span>&nbsp;</span>
+			
+			<a href="https://www.linkedin.com/in/jorgesaldivar1" rel="external">
+				<i class="fa fa-linkedin-square fa-3x" style="color: #0F5062;" aria-hidden="true"></i>
 			</a>
 	
 		</div>
 
 	</div>
 </div>
+
+</body>
+</html>
