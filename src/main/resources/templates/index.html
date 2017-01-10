@@ -5,7 +5,6 @@
 <head>
 
 <!-- Custom CSS -->
-<link th:href="@{/css/hideme.css}" rel="stylesheet" />
 <link th:href="@{/css/main.css}" rel="stylesheet" />
 <script th:src="@{/js/hideme.js}"></script>
 
@@ -15,35 +14,7 @@
 
 	<div layout:fragment="content">
 
-
-
-
-
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target="#myNavbar">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#myPage"></a>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav navbar-right">
-
-						<li th:with="about=#{nav.about}"><a href="#home"
-							th:text="${#strings.toUpperCase(about)}">ABOUT</a></li>
-						<li th:with="certs=#{nav.certs}"><a href="#certs"
-							th:text="${#strings.toUpperCase(certs)}">CERTS</a></li>
-						<li th:with="skills=#{nav.skills}"><a href="#skills"
-							th:text="${#strings.toUpperCase(skills)}">SKILLS</a></li>
-						<li th:with="contact=#{nav.contact}"><a href="#contact"
-							th:text="${#strings.toUpperCase(contact)}">CONTACT</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<div th:replace="fragments/navigationbar :: navigationBar"></div>
 
 		<div id="home" class="jumbotron">
 			<div class="container">
@@ -345,7 +316,7 @@
 
 
 			<div th:replace="fragments/footer :: footer"></div>
-			<br />
+			
 		</div>
 	</div>
 </body>

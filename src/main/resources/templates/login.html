@@ -5,12 +5,12 @@
 
 <head>
 
-	<title>Security Demo - Home Page</title>
+	<title>Login Page</title>
 	
 	<!-- Custom style -->
 	<link th:href="@{/css/signin.css}" href="../static/css/signin.css" rel="stylesheet" />
 	
-	<!-- Custom javascript -->
+	<!-- Custom JavaScript -->
 	<script th:inline="javascript">
 		/*<![CDATA[*/
 			var welcomeMessage = /*[[#{login.page.welcome}]]*/'Welcome to my website'; 
@@ -22,7 +22,7 @@
 
 <body>
 
-	<div layout:fragment="content">
+	<div layout:fragment="content" class="container-parent">
 
 		<div class="form-signin text-right">
 			<a href="?lang=en" th:text="#{language.english}">English</a> / <a href="?lang=es" th:text="#{language.spanish}">Spanish</a>
@@ -37,7 +37,7 @@
 
 					
 					<div th:if="${param.error}" class="alert alert-danger" role="alert" th:text="#{login.page.incorrect}">Wrong user or password</div>
-					<h2 class="form-signin-heading"><span id="message"></span>&nbsp;</h2>
+					<h3 class="form-signin-heading"><span id="message"></span>&nbsp;</h3>
 					
 					<label for="inputEmail" class="sr-only" th:text="#{login.page.email}">Email</label> 
 					<input type="text" id="inputEmail" class="form-control" th:placeholder="#{login.page.email}" placeholder="Username" required="required" name="username" /> 

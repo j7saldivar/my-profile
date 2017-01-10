@@ -12,7 +12,7 @@ function typePassword(password) {
 
 var i = 0, j = 0, k = 0;
 
-var message = ((typeof welcomeMessage !== 'undefined') ? welcomeMessage : "Welcome to my profile");
+var message = ((typeof welcomeMessage !== 'undefined') ? welcomeMessage : "Welcome to my website");
 var username = "me@jorgesaldivar.com";
 var password = "password";
 var usernameLength = username.length;
