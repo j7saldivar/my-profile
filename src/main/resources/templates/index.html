@@ -17,6 +17,7 @@
 		<div th:replace="fragments/navigationbar :: navigationBar"></div>
 
 		<div id="home" class="jumbotron">
+		
 			<div class="container">
 				<br />
 				<div class="text-right">
@@ -32,138 +33,121 @@
 			</div>
 		</div>
 
-		<!-- Container (About Section) -->
+		<!-- Container (About Me Section) -->
 		<div id="about" class="parallax-container hidden-xs">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-9 well">
-						<h2 class="text-left">About me</h2>
+						
+						<h2 class="text-left" th:text="#{nav.about}">About me</h2>
 
 						<strong th:text="#{index.page.educationtitle}">Education:</strong>
-						<p th:text="#{index.page.education}">
-							B.S. in Information and Computer Science at Monterrey Institute
-							of Technology and Higher Education
-							<!-- Instituto Tecnologico de Estudios Superiores de Monterrey-->
-						</p>
+						<p th:text="#{index.page.education}">B.S. in Information and Computer Science at Monterrey Institute of Technology and Higher Education</p>
+						
 						<strong th:text="#{index.page.experiencetitle}">Experience:</strong>
-						<p th:text="#{index.page.experience}">+3 years of experience
-							in software industry. Mostly experienced in programming languages
-							such as Java EE, Spring, JPA, JavaScript, and Oracle SQL for
-							RDBMS. Projects I have worked on:</p>
+						<p th:text="#{index.page.experience}">+3 years of experience in software industry. Mostly experienced in programming languages such as Java EE, Spring, JPA, JavaScript, and Oracle SQL for RDBMS. Projects I have worked on:</p>
+						
 						<ul>
-							<li><p th:text="#{index.page.project1}">Software
-									Development and Defect Fixing</p></li>
-							<li><p th:text="#{index.page.project2}">Data Mining and
-									Data Analysis</p></li>
+							<li><p th:text="#{index.page.project1}">Software Development and Defect Fixing</p></li>
+							<li><p th:text="#{index.page.project2}">Data Mining and Data Analysis</p></li>
 							<li><p th:text="#{index.page.project3}">Unix Scripting</p></li>
-
 						</ul>
 
-
-
-
-
-
 					</div>
+					
 					<div class="col-sm-3">
-
-						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Accenture-logo.png"
-							alt="ITIL" class="img-thumbnail well" width="100%" />
-
-
-
+										
+						<img th:src="@{images/Accenture-logo.png}" alt="Accenture" class="img-thumbnail well" width="100%" />
+			
+						<a href="https://drive.google.com/open?id=1Gk1iQoUzHU_js8GC1UvZ1zPHkrR9flj4OlkMRGDqZW8" target="_blank" type="button" class="btn btn-primary btn-lg btn-block" th:text="#{resume}">Resume</a>	
+							
 					</div>
+					
+				
+
 				</div>
+				<!-- /row -->
+				
 			</div>
+			<!-- /container -->
+		
 		</div>
+		<!-- /about -->
 
 
-
-
-		<!-- Container (Portfolio Section) -->
+		<!-- Experience -->
 		<div id="experience" class="container-fluid text-center bg-grey">
 
-			<h3 th:text="#{index.page.wordstodescribe}">Words that Describe
-				Myself</h3>
+			<h3 th:text="#{index.page.wordstodescribe}">Words that Describe Myself</h3>
+			
 			<br />
-			<div id="myCarousel" class="carousel slide text-center"
-				data-ride="carousel">
+			<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+				
 				<div class="container">
-					<!-- Indicators -->
+					
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						<li data-target="#myCarousel" data-slide-to="1"></li>
-						<li data-target="#myCarousel" data-slide-to="2"></li>
 					</ol>
 
-					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<h5 th:text="#{index.page.description1}">"Study! Study!
-								Study! - Kintaro Oe"</h5>
+							<h5 th:text="#{index.page.description1}">"Study! Study! Study! - Kintaro Oe"</h5>
 						</div>
+						
 						<div class="item">
-							<h5 th:text="#{index.page.description2}">"Thinking outside
-								the box"</h5>
+							<h5 th:text="#{index.page.description2}">"Thinking outside the box"</h5>
 						</div>
-
-
 
 					</div>
+					
 					<!-- Left and right controls -->
-					<a class="left carousel-control" href="#myCarousel" role="button"
-						data-slide="prev"> <span
-						class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<!-- 
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> 
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
-					</a> <a class="right carousel-control" href="#myCarousel" role="button"
-						data-slide="next"> <span
-						class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</a> 
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> 
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
-					</a>
+					</a> 
+					-->
 				</div>
+				<!-- /container -->
+			
 			</div>
+			<!-- /myCarousel -->
+			
 		</div>
+		<!-- /experience -->
 
 
 
-		<!-- Container (About Section) -->
-
-		<div
-			style="background-image: url(https://subtlepatterns.com/patterns/crossword.png); background-repeat: repeat;">
-			<br /> <br />
+		<!-- Certifications -->
+		<div class="back-pattern">
+			
+			<br /><br />
 			<div id="certs" class="container">
 				<h2 class="text-center" th:text="#{index.page.certifications}">Certifications</h2>
-<br />
-
-
-
+				
+				<br />
 				<div class="col-sm-4 hideme">
 					<div class="panel panel-default">
+						
 						<div class="panel-heading">ITIL Foundation - 2013</div>
 						<div class="panel-body">
-
-							<img th:src="@{/images/itil.png}"
-								src="http://core0.staticworld.net/images/idge/imported/article/cio/2013/02/21/itil-100341137-orig.jpg"
-								alt="ITIL" class="img-thumbnail" width="100%" />
-
+							<img th:src="@{/images/itil.png}" alt="ITIL" class="img-thumbnail" width="100%" />
 						</div>
 
 					</div>
 				</div>
 
-
-
-
 				<div class="col-sm-4 hideme">
 					<div class="panel panel-default">
+						
 						<div class="panel-heading">OCA Java SE 7 - 2014</div>
 						<div class="panel-body">
-
-							<img th:src="@{/images/oca_java.png}"
-								src="http://www.omni-academy.com/wp-content/uploads/2016/03/download-2.png"
-								alt="SQL" class="img-thumbnail" width="100%" />
-
+							<img th:src="@{/images/oca_java.png}" alt="OCA Java" class="img-thumbnail" width="100%" />
 						</div>
 
 					</div>
@@ -171,89 +155,62 @@
 
 				<div class="col-sm-4 hideme">
 					<div class="panel panel-default">
+					
 						<div class="panel-heading">OCE SQL Expert - 2016</div>
 						<div class="panel-body">
-
-							<img th:src="@{/images/oce_sql.png}"
-								src="http://www.cecs.ucf.edu/certification/logos/oca7.jpg"
-								alt="JAVA" class="img-thumbnail" width="100%" />
-
+							<img th:src="@{/images/oce_sql.png}" alt="SQL Expert" class="img-thumbnail" width="100%" />
 						</div>
 
 					</div>
 				</div>
 
-
+				<!-- Certificates of completion -->
 				<div class="col-sm-8">
 
-
-
-
-
-
-
-
-
-					<div class="panel panel-default">
-						<!-- Default panel contents -->
+					<div class="panel panel-default hideme">
+						
 						<div class="panel-heading">
 							<strong>Certifications of completion - udemy</strong>
 						</div>
-
-						<!-- Table -->
+							
 						<table class="table">
 
-
 							<tr>
-								<td> Hibernate</td><td> <small><code>(UC-N0PN2X8D)</code></small></td>
-								<td>Spring Tutorials</td><td> <small><code>(UC-6SG1IGRS)</code></small></td>
+								<td> Hibernate</td><td> <a href="https://www.udemy.com/certificate/UC-N0PN2X8D/" target="_blank"><small><code>(UC-N0PN2X8D)</code></small></a></td>
+								<td>Spring Tutorials</td><td> <a href="https://www.udemy.com/certificate/UC-6SG1IGRS/" target="_blank"><small><code>(UC-6SG1IGRS)</code></small></a></td>
 							</tr>
 							<tr>
-								<td>Design Patterns</td><td> <small><code>(UC-RTJU5RTF)</code></small></td>
-								<td>Multithreading</td><td> <small><code>(UC-L2PZ226X)</code></small></td>
+								<td>Design Patterns</td><td> <a href="https://www.udemy.com/certificate/UC-RTJU5RTF/" target="_blank"><small><code>(UC-RTJU5RTF)</code></small></a></td>
+								<td>Multithreading</td><td> <a href="https://www.udemy.com/certificate/UC-L2PZ226X/" target="_blank"><small><code>(UC-L2PZ226X)</code></small></a></td>
 							</tr>
 							<tr>
-								<td>Spring Boot</td><td> <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-45P6YNU5.jpg"><small><code>(UC-45P6YNU5)</code></small></a></td>
-								<td>Selenium</td><td> <small><code>(UC-HN3MWDA1)</code></small></td>
+								<td>Spring Boot</td><td> <a href="https://www.udemy.com/certificate/UC-45P6YNU5/" target="_blank"><small><code>(UC-45P6YNU5)</code></small></a></td>
+								<td>Selenium</td><td> <a href="https://www.udemy.com/certificate/UC-HN3MWDA1/" target="_blank"><small><code>(UC-HN3MWDA1)</code></small></a></td>
 							</tr>
 							<tr>
-								<td>Spring Framework</td><td> <small><code>(UC-IOJ7P00B)</code></small></td>
-								<td>Thymeleaf</td><td> <small><code>(UC-DM43Z6U4)</code></small></td>
+								<td>Spring Framework</td><td> <a href="https://www.udemy.com/certificate/UC-IOJ7P00B/" target="_blank"><small><code>(UC-IOJ7P00B)</code></small></a></td>
+								<td>Thymeleaf</td><td> <a href="https://www.udemy.com/certificate/UC-DM43Z6U4/" target="_blank"><small><code>(UC-DM43Z6U4)</code></small></a></td>
 							</tr>
-
-
-
+							<tr>
+								<td>Maven</td><td> <a href="https://www.udemy.com/certificate/UC-OGQ4A2YY/" target="_blank"><small><code>(UC-OGQ4A2YY)</code></small></a></td>
+								<td>Git</td><td> <a href="https://www.udemy.com/certificate/UC-XMS7KFAL/" target="_blank"><small><code>(UC-XMS7KFAL)</code></small></a></td>
+							</tr>
 
 						</table>
 
 
 					</div>
 
-					<!-- <button class="btn btn-primary btn-xs pull-right">
-					<p th:text="#{index.page.viewmore}">View More</p>
-				</button> -->
-
-
 				</div>
-
-
-
-
-
-
-
-
+				<!-- /certificates of completion -->
 
 			</div>
-
-
-
+			<!-- /certificates -->
 
 			<br />
-
 			<hr />
 
-			<!-- Container (Services Section) -->
+			<!-- Skills -->
 			<div id="skills" class="container">
 
 				<h2 class="text-center" th:text="#{index.page.skills}">SKILLS</h2>
@@ -265,7 +222,7 @@
 							<br />
 							<span class="fa fa-coffee fa-lg"></span>
 							<h4>JAVA</h4>
-							<p>Back-end</p>
+							<p>Back-End</p>
 						</div>
 					</div>
 					<div class="col-sm-4 hideme">
@@ -273,7 +230,7 @@
 							<br />
 							<span class="glyphicon glyphicon-heart logo-small"></span>
 							<h4>JAVASCRIPT</h4>
-							<p>Front-end</p>
+							<p>Front-End</p>
 						</div>
 					</div>
 					<div class="col-sm-4 hideme">
@@ -281,7 +238,7 @@
 							<br />
 							<span class="fa fa-database fa-lg"></span>
 							<h4>SQL</h4>
-							<p>Data mining/analysis</p>
+							<p>Data Mining/Analysis</p>
 						</div>
 					</div>
 				</div>
@@ -292,7 +249,7 @@
 							<br />
 							<span class="fa fa-linux fa-lg"></span>
 							<h4>UNIX</h4>
-							<p>Data mining/automation</p>
+							<p>Log Analysis/Automation</p>
 						</div>
 					</div>
 					<div class="col-sm-4 hideme">
@@ -300,7 +257,7 @@
 							<br />
 							<span class="fa fa-html5 fa-lg"></span>
 							<h4>HTML</h4>
-							<p>Web applications</p>
+							<p>Web Apps</p>
 						</div>
 					</div>
 					<div class="col-sm-4 hideme">
@@ -313,7 +270,7 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- /skills -->
 
 			<div th:replace="fragments/footer :: footer"></div>
 			

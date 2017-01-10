@@ -44,3 +44,8 @@
 .hideme {
 	opacity: 0;
 }
+
+.back-pattern {
+	background-image: url(https://subtlepatterns.com/patterns/crossword.png); 
+	background-repeat: repeat;
+}
