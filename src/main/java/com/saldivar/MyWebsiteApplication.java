@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class MyWebsiteApplication { 
+public class MyWebsiteApplication {  
 
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(MyWebsiteApplication.class, args);
