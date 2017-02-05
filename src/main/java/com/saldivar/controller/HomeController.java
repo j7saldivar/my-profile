@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.saldivar.dao.ProductRepository;
 import com.saldivar.dao.UserRepository;
 import com.saldivar.domain.Product;
 import com.saldivar.domain.User;
@@ -18,6 +19,8 @@ public class HomeController {
 
 	@Autowired
 	private UserRepository ur;
+	@Autowired
+	private ProductRepository pr;
 	
 	@RequestMapping({ "/", "index" })
 	public String getHome() {
@@ -36,19 +39,34 @@ public class HomeController {
 
 	@RequestMapping({ "/product-repository", "product-repository/{user}" })
 	@ResponseBody
-	public User getProduct(@PathVariable Optional<String> user) {
+	public Iterable<User> getProduct(@PathVariable Optional<String> user) {
 		if (user.isPresent()) {
 			User userAccount = new User();
 			userAccount.setUsername(user.get());
 	
-			Product product = new Product();
+			Product product = pr.findOne(1);
+					
+			if(product == null) 
+				product = new Product();
 			product.setName("Mango");
 			
 			userAccount.getProduct().add(product);
 			
 			ur.save(userAccount);
 		}
-		return ur.findByUsername("Samantha");
+		
+		for(User u: ur.findAll()) {
+			System.out.println(u.getUsername() + " product: ");
+
+			for(Product p : u.getProduct()) {
+				System.out.println(p.getName());
+			}
+			
+		}
+		
+		
+		
+		return ur.findAll();
 	}
 
 }

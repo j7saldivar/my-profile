@@ -12,9 +12,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Product {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
@@ -23,19 +25,10 @@ public class Product {
 	private String name;
 
 	@ManyToMany(mappedBy = "product", cascade = { CascadeType.ALL}, fetch = FetchType.LAZY)
-	private Set<User> user = new HashSet<User>();
+	@JsonBackReference
+	private Set<User> user = new HashSet<>();
 
-	public Product() {
-
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	public Product () {}
 
 	public String getName() {
 		return name;
@@ -47,6 +40,15 @@ public class Product {
 
 	public Set<User> getUser() {
 		return user;
+	}
+
+	public void setUser(Set<User> user) {
+		this.user = user;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + "]";
 	}
 
 	@Override

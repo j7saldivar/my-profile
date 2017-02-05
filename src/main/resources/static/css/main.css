@@ -32,8 +32,9 @@
 	border: 1px solid #333;
 }
 
-
-
+.carousel-indicators {
+	bottom: 23px;
+}
 
 .navbar-default {
 

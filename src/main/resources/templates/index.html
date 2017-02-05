@@ -19,7 +19,7 @@
 		<div id="home" class="jumbotron">
 		
 			<div class="container">
-				<br />
+				<br /><br class="visible-xs" />
 				<div class="text-right">
 					<a href="?lang=en" th:text="#{language.english}">English</a> / <a
 						href="?lang=es" th:text="#{language.spanish}">Spanish</a>
@@ -34,10 +34,11 @@
 		</div>
 
 		<!-- Container (About Me Section) -->
-		<div id="about" class="parallax-container hidden-xs">
+		<div id="about" class="parallax-container">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-9 well">
+					<div class="col-sm-9">
+					<div class="well">
 						
 						<h2 class="text-left" th:text="#{nav.about}">About me</h2>
 
@@ -53,6 +54,7 @@
 							<li><p th:text="#{index.page.project3}">Unix Scripting</p></li>
 						</ul>
 
+					</div>
 					</div>
 					
 					<div class="col-sm-3">
@@ -84,12 +86,12 @@
 			<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 				
 				<div class="container">
-					
+										
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>		
 					</ol>
-
+				
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
 							<h5 th:text="#{index.page.description1}">"Study! Study! Study! - Kintaro Oe"</h5>
@@ -172,7 +174,8 @@
 						<div class="panel-heading">
 							<strong>Certifications of completion - udemy</strong>
 						</div>
-							
+						
+						<div class="table-responsive">
 						<table class="table">
 
 							<tr>
@@ -197,6 +200,7 @@
 							</tr>
 
 						</table>
+						</div>
 
 
 					</div>
@@ -236,14 +240,65 @@
 					<div class="col-sm-4 hideme">
 						<div class="thumbnail">
 							<br />
+							<span class="fa fa-code fa-lg"></span>
+							<h4>PYTHON</h4>
+							<p>Back-End</p>
+						</div>
+					</div>
+				</div>				
+
+				<div class="row slideanim  text-center">
+					
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-leaf fa-lg"></span>
+							<h4>Spring Framework</h4>
+							<p>Java Framework</p>
+						</div>
+					</div>
+					
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-book fa-lg"></span>
+							<h4>JQUERY</h4>
+							<p>JavaScript Library</p>
+						</div>
+					</div>					
+					
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-pencil-square-o fa-lg"></span>
+							<h4>Django</h4>
+							<p>Python Framework</p>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+				<div class="row slideanim  text-center">
+				
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
+							<span class="fa fa-cube fa-lg"></span>
+							<h4>Hibernate</h4>
+							<p>ORM Framework</p>
+						</div>
+					</div>
+					
+					<div class="col-sm-4 hideme">
+						<div class="thumbnail">
+							<br />
 							<span class="fa fa-database fa-lg"></span>
 							<h4>SQL</h4>
 							<p>Data Mining/Analysis</p>
 						</div>
 					</div>
-				</div>
-				<br /> <br />
-				<div class="row slideanim  text-center">
+					
 					<div class="col-sm-4 hideme">
 						<div class="thumbnail">
 							<br />
@@ -252,22 +307,7 @@
 							<p>Log Analysis/Automation</p>
 						</div>
 					</div>
-					<div class="col-sm-4 hideme">
-						<div class="thumbnail">
-							<br />
-							<span class="fa fa-html5 fa-lg"></span>
-							<h4>HTML</h4>
-							<p>Web Apps</p>
-						</div>
-					</div>
-					<div class="col-sm-4 hideme">
-						<div class="thumbnail">
-							<br />
-							<span class="fa fa-wrench fa-lg"></span>
-							<h4>JQUERY</h4>
-							<p>User Interface</p>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<!-- /skills -->

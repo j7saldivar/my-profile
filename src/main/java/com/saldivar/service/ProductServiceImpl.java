@@ -11,7 +11,6 @@ public class ProductServiceImpl implements ProductService {
 	
 	public ProductServiceImpl () {
 		Product product = new Product();
-		product.setId(1);
 		product.setName("Product name");
 		p = product;
 	}
