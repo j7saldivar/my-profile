@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 public class User {
 
@@ -27,18 +29,10 @@ public class User {
 	@ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 	@JoinTable(name = "user_product", joinColumns = { @JoinColumn(name = "user_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "product_id") })
-	private Set<Product> product = new HashSet<Product>();
+	@JsonManagedReference
+	private Set<Product> product = new HashSet<>();
 
-	public User() {
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	public User() {}
 
 	public String getUsername() {
 		return username;
@@ -50,6 +44,15 @@ public class User {
 
 	public Set<Product> getProduct() {
 		return product;
+	}
+
+	public void setProduct(Set<Product> product) {
+		this.product = product;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + "]";
 	}
 
 	@Override
@@ -76,5 +79,5 @@ public class User {
 			return false;
 		return true;
 	}
-
+	
 }
