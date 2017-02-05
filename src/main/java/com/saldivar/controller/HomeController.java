@@ -56,10 +56,10 @@ public class HomeController {
 		}
 		
 		for(User u: ur.findAll()) {
-			System.out.println(u.getUsername() + " product: ");
+			//System.out.println(u.getUsername() + " product: ");
 
 			for(Product p : u.getProduct()) {
-				System.out.println(p.getName());
+				//System.out.println(p.getName());
 			}
 			
 		}
