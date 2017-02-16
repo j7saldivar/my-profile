@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/spring"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layouts/main">
-<head></head>
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layouts/main">
+	  
 <body>
 
 	<nav class="navbar navbar-default navbar-fixed-top" th:fragment="navigationBar">
@@ -21,13 +21,14 @@
 				<div class="collapse navbar-collapse" id="myNavbar">
 					
 					<ul class="nav navbar-nav navbar-right">
-
-						<li th:with="about=#{nav.about}"><a href="#home" th:text="${#strings.toUpperCase(about)}">ABOUT</a></li>
-						<!-- <li th:with="certs=#{nav.certs}"><a href="#certs" th:text="${#strings.toUpperCase(certs)}">CERTS</a></li>
-						<li th:with="skills=#{nav.skills}"><a href="#skills" th:text="${#strings.toUpperCase(skills)}">SKILLS</a></li> -->
-						<li th:with="contact=#{nav.contact}"><a th:href="'mailto:me@jorgesaldivar.com?subject=' + #{nav.contact-message}" target="_top" th:text="${#strings.toUpperCase(contact)}">CONTACT</a></li>
+						
+						<li th:with="contact=#{nav.contact}"><a th:href="'mailto:me@jorgesaldivar.com?subject=' + #{nav.contact-message}" target="_top" th:text="${#strings.toUpperCase(contact)}">CONTACT</a></li>			
 						<li th:with="sourceCode=#{nav.sourceCode}"><a href="https://github.com/j7saldivar/my-website" target="_blank" th:text="${#strings.toUpperCase(sourceCode)}">SOURCE CODE</a></li>
-					
+						<li class="dropdown" th:with="apps=#{nav.apps}"><a class="dropdown-toggle" data-toggle="dropdown" href="#" th:utext="${#strings.toUpperCase(apps)} + ' ' + #{nav.dropdown}">APPS</a>
+							<ul class="dropdown-menu">
+	          					<li><a href="/apps/google-recaptcha">Google reCAPTCHA</a></li>
+	      					</ul>
+						</li>
 					</ul>
 				
 				</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/spring"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layouts/main">
+
+<head>
+
+<!-- Custom CSS -->
+<link th:href="@{/css/main.css}" rel="stylesheet" />
+<link th:href="@{/css/google-recaptcha.css}" rel="stylesheet" />
+
+<script th:src="#{apps.google.recaptcha.robot}"></script>
+<script th:src="@{/js/google-recaptcha.js}"></script>
+
+
+</head>
+
+<body class="back-pattern">
+
+	<div layout:fragment="content">
+
+		<div th:replace="fragments/navigationbar :: navigationBar"></div>
+		<br /><br /><br />
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-8">
+					<h3>JSON Google reCAPTCHA Response</h3>
+				</div>
+				<div class="col-sm-4"></div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-8">
+
+					<pre id="jsonTextFormat"></pre>
+
+				</div>
+
+				<div class="col-sm-4">
+
+					<div class="recap">
+
+						<form id="postId" class="form-horizontal" action="/apps/google-recaptcha/post" method="post">
+
+							<div class="form-group">
+								<div class="g-recaptcha"
+									data-sitekey="6LcHBBUUAAAAALU97NaRS-ATpgFacjgVTbXcpvnr"></div>
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+
+						</form>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div th:replace="fragments/footer :: footer"></div>
+
+	</div>
+</body>
+</html>

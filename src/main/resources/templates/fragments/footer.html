@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/spring"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layouts/main">
-<head></head>
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorator="layouts/main">
+
 <body>
 
 <div class="container" th:fragment="footer">
@@ -10,11 +10,11 @@
 	<hr />
 	<div class="row">
 		
-		<div class="col-sm-3 text-left">
+		<div class="col-sm-6 text-left">
 			<span th:text="#{footer.message}">JorgeSaldivar.com is hosted on AWS</span>
 		</div>
 	
-		<div class="col-sm-9 text-right">
+		<div class="col-sm-6 text-right">
 	
 			<a href="http://github.com/j7saldivar" target="_blank" rel="external">
 				<i class="fa fa-github fa-3x" style="color: #0F5062;" aria-hidden="true"></i>

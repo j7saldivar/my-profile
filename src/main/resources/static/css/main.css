@@ -7,9 +7,7 @@
 }
 
 #about {
-	background:
-		url(https://upload.wikimedia.org/wikipedia/commons/a/a5/Austin_Evening.jpg)
-		no-repeat center center fixed;
+	background: url('../images/Austin_Evening.jpg') no-repeat center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -47,6 +45,6 @@
 }
 
 .back-pattern {
-	background-image: url(https://subtlepatterns.com/patterns/crossword.png); 
+	background-image: url('../images/crossword.png'); 
 	background-repeat: repeat;
 }
