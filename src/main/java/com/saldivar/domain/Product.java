@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Product {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
@@ -24,11 +24,12 @@ public class Product {
 	@Column(nullable = false)
 	private String name;
 
-	@ManyToMany(mappedBy = "product", cascade = { CascadeType.ALL}, fetch = FetchType.LAZY)
+	@ManyToMany(mappedBy = "product", cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 	@JsonBackReference
 	private Set<User> user = new HashSet<>();
 
-	public Product () {}
+	public Product() {
+	}
 
 	public String getName() {
 		return name;

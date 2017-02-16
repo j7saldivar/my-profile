@@ -10,6 +10,11 @@ import com.saldivar.dao.ProductRepository;
 import com.saldivar.dao.UserRepository;
 import com.saldivar.utility.ProjectUtilities;
 
+/*
+ * Currently not usedE
+ * Would need to add @EnableScheduling to the spring main class to enable
+ */
+
 @Component
 public class CronController {
 
@@ -23,7 +28,6 @@ public class CronController {
 
 	@Scheduled(cron="0 0 0 * * *")
 	public void cleanup() {
-		
 		pr.deleteAll();
 		ur.deleteAll();
 		logger.info("Database cleaned at " + ProjectUtilities.dateTimeNow());
