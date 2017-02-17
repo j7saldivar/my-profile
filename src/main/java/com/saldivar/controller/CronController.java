@@ -12,7 +12,7 @@ import com.saldivar.dao.UserRepository;
 import com.saldivar.utility.ProjectUtilities;
 
 /**
- * Currently not usedE
+ * Currently not used
  * Would need to add {@link EnableScheduling} to the spring main class to enable
  * 
  * @author Jorge.Saldivar
