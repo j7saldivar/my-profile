@@ -6,9 +6,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+/**
+ * 
+ * Configuration class to create the console web point
+ * for accessing H2 console web browser
+ * 
+ * @author Jorge.Saldivar
+ *
+ */
 @Configuration
 public class SpringDbConsoleConfig {
 
+	/**
+	 * 
+	 * @return registration bean
+	 */
 	@Profile(value="development") 
 	@Bean
 	ServletRegistrationBean h2servletRegistration() {

@@ -4,6 +4,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+/**
+ * Exception main class
+ * 
+ * @author Jorge.Saldivar
+ *
+ */
 @ControllerAdvice
 public class ExceptionController {
  

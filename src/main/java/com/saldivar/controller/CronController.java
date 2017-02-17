@@ -3,6 +3,7 @@ package com.saldivar.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -10,11 +11,13 @@ import com.saldivar.dao.ProductRepository;
 import com.saldivar.dao.UserRepository;
 import com.saldivar.utility.ProjectUtilities;
 
-/*
+/**
  * Currently not usedE
- * Would need to add @EnableScheduling to the spring main class to enable
+ * Would need to add {@link EnableScheduling} to the spring main class to enable
+ * 
+ * @author Jorge.Saldivar
+ *
  */
-
 @Component
 public class CronController {
 

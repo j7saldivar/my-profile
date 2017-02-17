@@ -4,6 +4,14 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * 
+ * Google JSON response will be mapped
+ * to the beans of this class
+ * 
+ * @author Jorge.Saldivar
+ *
+ */
 public class GoogleCaptchaResponse {
 
 	@JsonProperty("success")
@@ -42,11 +50,11 @@ public class GoogleCaptchaResponse {
 		this.hostname = hostname;
 	}
 
-	public List getErrorCodes() {
+	public List<String> getErrorCodes() {
 		return errorCodes;
 	}
 
-	public void setErrorCodes(List errorCodes) {
+	public void setErrorCodes(List<String> errorCodes) {
 		this.errorCodes = errorCodes;
 	}
 
