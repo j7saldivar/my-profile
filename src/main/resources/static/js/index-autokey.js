@@ -23,17 +23,17 @@ function autoTypeSubmit() {
 
 	if (i <= messageLenght) {
 		typeMessage(message.substring(0, i));
-		setTimeout(autoTypeSubmit, 100);
+		setTimeout(autoTypeSubmit, 50);
 		i++;
 	}
 
 	else if (j <= usernameLength) {
 		typeUsername(username.substring(0, j));
-		setTimeout(autoTypeSubmit, 100);
+		setTimeout(autoTypeSubmit, 50);
 		j++;
 	} else if (k <= passwordLenght) {
 		typePassword(password.substring(0, k));
-		setTimeout(autoTypeSubmit, 100);
+		setTimeout(autoTypeSubmit, 50);
 		k++;
 	} else {
 

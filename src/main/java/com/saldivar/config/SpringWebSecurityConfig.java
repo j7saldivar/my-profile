@@ -7,10 +7,22 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+/**
+ * Security configuration class
+ * 
+ * @author Jorge.Saldivar
+ *
+ */
 @Configuration
 @EnableWebSecurity
 public class SpringWebSecurityConfig extends WebSecurityConfigurerAdapter {
-    @Override
+    
+	/**
+	 * Security permitted urls if user is not logged. 
+	 * Login page configuration.
+	 * CSRF disabled
+	 */
+	@Override
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
@@ -28,6 +40,11 @@ public class SpringWebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();
     }
 
+	/**
+	 * 
+	 * @param auth
+	 * @throws Exception
+	 */
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth

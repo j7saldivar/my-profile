@@ -5,6 +5,12 @@ import java.security.Principal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * Home page main controller
+ * 
+ * @author Jorge.Saldivar
+ *
+ */
 @Controller
 public class HomeController {
 

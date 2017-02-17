@@ -10,9 +10,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
+/**
+ * Language Configuration Class
+ * 
+ * @author Jorge.Saldivar
+ *
+ */
 @Configuration
 public class SpringMvcConfig extends WebMvcConfigurerAdapter {
 	
+	/**
+	 * Configures the default language to English
+	 * 
+	 * @return {@link SessionLocaleResolver}
+	 */
 	@Bean
 	LocaleResolver localeResolver() {
 		SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
@@ -20,6 +31,11 @@ public class SpringMvcConfig extends WebMvcConfigurerAdapter {
 		return sessionLocaleResolver;
 	}
 	
+	/**
+	 * Configures the default string that will be used as the GET parameter name
+	 * 
+	 * @return {@link LocaleChangeInterceptor}
+	 */
 	@Bean
 	LocaleChangeInterceptor localeChangeInterceptor () {
 		LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();

@@ -13,6 +13,12 @@ import org.springframework.web.client.RestTemplate;
 import com.saldivar.bean.GoogleCaptchaRequest;
 import com.saldivar.bean.GoogleCaptchaResponse;
 
+/**
+ * Main Apps controller
+ * 
+ * @author saldivar
+ *
+ */
 @Controller
 @RequestMapping("/apps")
 public class AppsController {
@@ -25,6 +31,13 @@ public class AppsController {
 		return "googleRecaptcha";
 	}
 
+	/**
+	 * Sends the post object to google recaptcha service
+	 * 
+	 * @param request Object that will be sent to google
+	 * @param model 
+	 * @return JSON google response 
+	 */
 	@RequestMapping(value = "/google-recaptcha/post", method = RequestMethod.POST)
 	@ResponseBody
 	public GoogleCaptchaResponse postForm(HttpServletRequest request, Model model) {
