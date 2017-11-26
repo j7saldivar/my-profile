@@ -2,14 +2,14 @@
   font-family: 'Raleway';
   font-weight: 400;
   font-style: normal;
-  src: url('http://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot');
-  src: url('http://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot?#iefix') format('embedded-opentype'),
+  src: url('https://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot');
+  src: url('https://fonts.gstatic.com/s/raleway/v11/JDau3G46nqY5-B-S9E_nwg.eot?#iefix') format('embedded-opentype'),
        local('Raleway'),
        local('Raleway-regular'),
-       url('http://fonts.gstatic.com/s/raleway/v11/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2') format('woff2'),
-       url('http://fonts.gstatic.com/s/raleway/v11/cIFypx4yrWPDz3zOxk7hIQLUuEpTyoUstqEm5AMlJo4.woff') format('woff'),
-       url('http://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf') format('truetype'),
-       url('http://fonts.gstatic.com/l/font?kit=IP_NSg73bUZGuyb3zF6qcQ&skey=30a27f2564731c64&v=v11#Raleway') format('svg');
+       url('https://fonts.gstatic.com/s/raleway/v11/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/raleway/v11/cIFypx4yrWPDz3zOxk7hIQLUuEpTyoUstqEm5AMlJo4.woff') format('woff'),
+       url('https://fonts.gstatic.com/s/raleway/v11/bIcY3_3JNqUVRAQQRNVteQ.ttf') format('truetype'),
+       url('https://fonts.gstatic.com/l/font?kit=IP_NSg73bUZGuyb3zF6qcQ&skey=30a27f2564731c64&v=v11#Raleway') format('svg');
 }
 
 * {
