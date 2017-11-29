@@ -40,5 +40,4 @@ jobs:
 
       # automatic docker trigger
       - deploy:
-          command:
-            - $DOCKER_HUB_TRIGGER
+          command: $DOCKER_HUB_TRIGGER
