@@ -39,8 +39,6 @@ jobs:
       - run: mvn integration-test
 
       # automatic docker trigger
-      - deployment:
-          dockerhub:
-            branch: master
-            commands:
-              - $DOCKER_HUB_TRIGGER
+      - deploy:
+          command:
+            - $DOCKER_HUB_TRIGGER
