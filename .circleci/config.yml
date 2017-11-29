@@ -38,8 +38,8 @@ jobs:
       # run tests!
       - run: mvn integration-test
 
-  deployment:
-    dockerhub:
-      branch: master
-      commands:
-        - $DOCKER_HUB_TRIGGER
+deployment:
+  dockerhub:
+    branch: master
+    commands:
+      - $DOCKER_HUB_TRIGGER
