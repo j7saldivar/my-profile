@@ -7,11 +7,7 @@
 
 <!-- Custom CSS -->
 <link th:href="@{/css/main.css}" rel="stylesheet" />
-<link th:href="@{/css/google-recaptcha.css}" rel="stylesheet" />
-
-<script th:src="#{apps.google.recaptcha.robot}"></script>
-<script th:src="@{/js/google-recaptcha.js}"></script>
-
+<script th:src="@{/js/docker-running-images.js}"></script>
 
 </head>
 
@@ -38,7 +34,8 @@
 				<div  class="col-sm-12">
 					<br/>
 					Currently image containers running on this instance:
-					<pre th:text="${dockerProcess}">Docker Process</pre>
+
+					<pre id="jsonTextFormat"></pre>
 					
 					<br/>
 					
