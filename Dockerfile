@@ -9,4 +9,4 @@ RUN yum install -y git \
 	&& yum install -y java-1.8.0-openjdk \	
 	&& yum install -y maven \
 	&& mvn -f my-website/pom.xml clean package 
-EXPOSE 8080
+EXPOSE 8080 8443
