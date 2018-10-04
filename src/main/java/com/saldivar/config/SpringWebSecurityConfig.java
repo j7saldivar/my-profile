@@ -6,19 +6,20 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
 /**
  * Security configuration class
- * 
+ *
  * @author Jorge.Saldivar
  *
  */
 @Configuration
 @EnableWebSecurity
 public class SpringWebSecurityConfig extends WebSecurityConfigurerAdapter {
-    
+
 	/**
-	 * Security permitted urls if user is not logged. 
+	 * Security permitted urls if user is not logged.
 	 * Login page configuration.
 	 * CSRF disabled
 	 */
@@ -35,13 +36,13 @@ public class SpringWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .logout()
                 .permitAll();
-        
+
         http.csrf().disable();
         http.headers().frameOptions().disable();
     }
 
 	/**
-	 * 
+	 *
 	 * @param auth
 	 * @throws Exception
 	 */
@@ -49,6 +50,7 @@ public class SpringWebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
             .inMemoryAuthentication()
+				.passwordEncoder(NoOpPasswordEncoder.getInstance())
                 .withUser("me@jorgesaldivar.com").password("password").roles("USER");
     }
 }
