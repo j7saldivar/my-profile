@@ -1,4 +1,4 @@
-package com.saldivar.bean;
+package com.jorgesaldivar.message;
 
 import java.util.List;
 

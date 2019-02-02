@@ -1,4 +1,4 @@
-package com.saldivar.config;
+package com.jorgesaldivar.config;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;

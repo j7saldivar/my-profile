@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 			$.ajax({
 				type : 'POST', 
-				url : '/apps/google-recaptcha/post', 
+				url : '/apps/google-recaptcha',
 				data : recaptcha, 
 				dataType : 'json', 
 				encode : true
