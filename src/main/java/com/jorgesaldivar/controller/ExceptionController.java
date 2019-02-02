@@ -1,4 +1,4 @@
-package com.saldivar.controller;
+package com.jorgesaldivar.controller;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;

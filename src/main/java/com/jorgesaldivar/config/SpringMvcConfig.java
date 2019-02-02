@@ -1,4 +1,4 @@
-package com.saldivar.config;
+package com.jorgesaldivar.config;
 
 import java.util.Locale;
 

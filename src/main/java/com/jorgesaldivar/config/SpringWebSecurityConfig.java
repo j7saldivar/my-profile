@@ -1,4 +1,4 @@
-package com.saldivar.config;
+package com.jorgesaldivar.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

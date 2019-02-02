@@ -1,4 +1,4 @@
-package com.saldivar;
+package com.jorgesaldivar;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
