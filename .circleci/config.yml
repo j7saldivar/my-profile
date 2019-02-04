@@ -24,6 +24,7 @@ jobs:
     
     steps:
       - checkout
+      - setup_remote_docker
 
       # Download and cache dependencies
       - restore_cache:
@@ -43,5 +44,15 @@ jobs:
       - run: mvn integration-test
 
       # automatic docker triggering
-      - deploy:
-          command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD | sudo docker build . | sudo docker push jorgesaldivar/my-website 
+      - run:
+          name: Login to Docker 
+          command: |
+            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD 
+      - run:
+          name: Build image
+          command: |
+            docker build -t jorgesaldivar/my-website . 
+      - run:
+          name: Push to Docker
+          command: |
+            docker push jorgesaldivar/my-website 
