@@ -44,4 +44,4 @@ jobs:
 
       # automatic docker triggering
       - deploy:
-          command: $DOCKER_HUB_TRIGGER
+          command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD | sudo docker build . | sudo docker push jorgesaldivar/my-website 
