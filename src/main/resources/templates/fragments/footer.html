@@ -12,7 +12,9 @@
 	<div class="row">
 		
 		<div class="col-sm-6 text-left">
-			<span th:text="#{footer.message}">JorgeSaldivar.com is hosted on AWS</span>
+
+
+			<span th:text="#{footer.message(${#dates.format(#dates.createNow(), 'yyyy')})}">JorgeSaldivar.com</span>
 		</div>
 	
 		<div class="col-sm-6 text-right">

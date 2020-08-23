@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.security.Principal;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
@@ -23,11 +22,6 @@ public class HomeController {
                 "yearsOfExperience",
                 Period.between(LocalDate.of(2013, Month.JUNE, 1), LocalDate.now()).getYears());
         return "index";
-    }
-
-    @RequestMapping("/login")
-    public String login(Principal principal) {
-        return principal != null ? "redirect:/" : "login";
     }
 
 }
