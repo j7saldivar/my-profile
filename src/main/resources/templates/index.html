@@ -287,6 +287,42 @@
 			</div>
 			<!-- /skills -->
 
+			<br />
+			<hr />
+
+			<div id="projects" class="container">
+				<h2 class="text-center" th:text="#{index.page.projects}">Projects</h2>
+
+				<br />
+				<div class="col-sm-4 hideme">
+					<div class="panel panel-default">
+
+						<div class="panel-heading"><a href="https://hubbledouble.com" target="_blank"><div th:text="#{index.page.projects.1}">My open source libraries</div></a></div>
+						<div class="panel-body">
+							<a href="https://hubbledouble.com" target="_blank">
+								<img th:src="@{/images/hubbledouble.png}" alt="hubbledouble" class="img-thumbnail" width="100%" />
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-sm-4 hideme">
+					<div class="panel panel-default">
+
+					</div>
+				</div>
+
+				<div class="col-sm-4 hideme">
+					<div class="panel panel-default">
+
+					</div>
+				</div>
+
+
+			</div>
+			<!-- Projects -->
+
 			<div th:replace="fragments/footer :: footer"></div>
 			
 		</div>
